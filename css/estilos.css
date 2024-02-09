@@ -1,0 +1,257 @@
+/*Para todo el documetno*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*variables*/
+/*Header*/
+header {
+  height: 100px;
+  background-color: #808080;
+  padding: 0 50px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 200;
+}
+header #check {
+  display: none;
+}
+header .mostrar-menu {
+  order: 1;
+}
+header .menu a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+header .menu a .mostrar-menu .esconder-menu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+.esconder-menu .menu header:hover .mostrar-menu:hover:hover {
+  color: lightskyblue;
+}
+
+#banner {
+  padding: 0 50px;
+  background-image: url(../medios/mr530.jpg);
+  height: 45vh;
+  background-position: center;
+}
+#banner .banner-contenedor {
+  position: relative;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#banner .banner-contenedor .banner-contenedor h3 span {
+  font-weight: 600;
+}
+
+#zapatillas {
+  padding: 50px 50px;
+  text-align: left;
+  display: flex;
+  background-color: #000000;
+}
+#zapatillas .parrafo {
+  margin-bottom: 100px;
+}
+#zapatillas div {
+  padding: 30px 30px;
+}
+#zapatillas div .parrafo {
+  margin-bottom: 100px;
+}
+#zapatillas div h4 {
+  color: gray;
+  font-size: 20px;
+  margin: 15px 0px;
+  text-align: left;
+}
+#zapatillas div p {
+  color: grey;
+  font-size: 18px;
+}
+#zapatillas div img {
+  width: 600px;
+}
+
+footer .logotipo {
+  padding: 0px 50px;
+  background-color: gray;
+}
+footer .logotipo #contenido-logotipo {
+  padding: 50px 50px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+footer .logotipo #contenido-logotipo div {
+  flex: 1;
+  margin: 20px 0px;
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+footer .logotipo #contenido-logotipo div a {
+  color: black;
+}
+
+/*contacto*/
+#contactanos {
+  background: black;
+  padding: 50px 0px;
+  color: white;
+}
+#contactanos h4 {
+  text-align: center;
+  font-size: 50px 0px;
+  margin-bottom: 20px;
+}
+#contactanos form {
+  max-width: 80%;
+  margin: 0 auto;
+}
+#contactanos form .datos-form {
+  display: flex;
+}
+#contactanos form .datos-form div {
+  padding: 10px;
+  flex: 1;
+}
+#contactanos form .datos-form div label {
+  display: block;
+  margin-bottom: 10px;
+}
+#contactanos form .datos-form div input form textarea {
+  background-color: black;
+  border-radius: 10px;
+  border: 2px solid gray;
+  padding: 10px 5px;
+  outline: 0;
+  color: white;
+  width: 100%;
+}
+#contactanos form .datos-form div:focus:focus {
+  border-color: black;
+  box-shadow: gray;
+}
+textarea input #contactanos form .datos-form div::placeholder::placeholder {
+  color: white;
+}
+#contactanos form .mensaje {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+#contactanos form .boton-formulario .boton-saber-mas {
+  display: block;
+  margin-bottom: 10px;
+  border: 5px solid black;
+  color: white;
+  text-align: center;
+  transition: 0.4s;
+}
+#contactanos form .boton-formulario:hover {
+  background-color: gray;
+}
+
+/*knu*/
+#zapatillask {
+  padding: 50px 50px;
+  text-align: left;
+  display: flex;
+}
+#zapatillask div {
+  padding: 30px 30px;
+}
+#zapatillask div h4 {
+  color: gray;
+  font-size: 20px;
+  margin: 15px 0px;
+  text-align: left;
+}
+#zapatillask div p {
+  color: grey;
+  font-size: 18px;
+}
+#zapatillask div img {
+  border-radius: 100%;
+}
+
+/*about us*/
+#parrafos {
+  padding: 10px 0px 10px 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  text-align: justify;
+}
+
+/*media queries*/
+@media (max-width: 768px) {
+  /*header*/
+  .mostrar-menu .esconder-menu {
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: gray;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 100px 0px;
+    z-index: 100;
+    transition: 0.8s;
+  }
+  .menu a {
+    display: block;
+    padding: 20px;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+  #zapatillas {
+    flex-direction: column;
+    padding: 50px 0px;
+    text-align: left;
+  }
+  #zapatillas #size {
+    padding: 30px 0px;
+    width: 400px;
+    height: 500px;
+  }
+  #zapatillas #zapatillas img {
+    width: 250px;
+  }
+  /*footer*/
+  #contenido-logotipo {
+    flex-direction: column;
+  }
+  #contenido-logotipo div {
+    border: none;
+  }
+  /*contacto*/
+  .datos-form {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */
